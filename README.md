@@ -1,7 +1,8 @@
 # celltocellreproduce
+Code by Brian Camley (http://bcamley.github.io)
 README - 
 
-This package contains MATLAB code and data that should be sufficient to reproduce everything in the paper, "Cell-to-cell variation sets a tissue-rheology-dependent bound on collective gradient sensing"
+This package contains MATLAB code and data that should be sufficient to reproduce everything in the paper, "Cell-to-cell variation sets a tissue-rheology-dependent bound on collective gradient sensing", currently available on the arxiv at: https://arxiv.org/abs/1707.03532
 
 
 Each folder provides that code and data for a different element of the paper:
