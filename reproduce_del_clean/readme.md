@@ -4,13 +4,13 @@ These simulations are more extensive, and require some cluster time and more com
 
 Here is our approach:
 
-1) Use the matlab compiler, mcc, to compile the simulation code to an executable. The simulation code is in the folder "simulation_code"
+1) Use the matlab compiler, mcc, to compile the simulation code to an executable. The simulation code is in the folder "simulation_code"\
    You will need to do this either on the cluster you use or a system that can create compatible binaries. 
 
   mcc -m ensemble_del_psi.m
 
-  This will create an executable with the name "ensemble_del_psi" (assuming you're on *nix)
-  The "ensemble_del_psi" code runs the self-propelled particle simulation amultiple times and averages the results into useful statistics.
+  This will create an executable with the name "ensemble_del_psi" (assuming you're on *nix)\
+  The "ensemble_del_psi" code runs the self-propelled particle simulation amultiple times and averages the results into useful statistics.\
   However, we will need to run this code many different times, over many parameter ranges - I've included some scripts to do this (see below). 
 
 2) Make sure that your cluster has a copy of the Matlab Compiler Runtime (MCR) installed. This can be installed in a local directory in your cluster, so you probably don't need to bug your cluster admin. The version of MCR you install needs to match the version of Matlab you will use to compile the code.
@@ -28,7 +28,7 @@ Here is our approach:
      will generate num_1xnum_2 scripts named job_name1.sh, job_name2.sh, etc...
      these scripts will vary the first parameter over num_1 points over a range given in twosweep.pl, and the second parameter over num_2 points over the range in twosweep.pl
 
-     To reproduce Fig. 4, use twosweep_varykappa.pl and vary over 10 x 10
+     To reproduce Fig. 4, use twosweep_varykappa.pl and vary over 10 x 10\
      To reproduce Fig. 5, use twosweep_varyDpsi.pl and vary over 2 x 20
 
    c) Submit the scripts! I suggest first running only one script, and editing it to have only a small number of iterations (change Nits = 2) to make sure the code runs and saves properly
@@ -49,10 +49,10 @@ Here is our approach:
 
       od = cellvar_analyze(filename_start,Nboots,doplot,doCIerr,nw,nh);
 
-    -filename_start is the first part of the files to be analyzed, i.e. filename_start1.mat, filename_start2.mat, ...
-    -Nboots is the number of bootstrap runs used in estimating the errors in the position-position correlation time (default 50)
-    -if doplot is true, after finishing, the simulation will plot position-position correlations and their exponential fits
-    -doCIerr should be false - it is an attempt to propagate some errors through the CI, but turns out to be both slow and negligible
+    -filename_start is the first part of the files to be analyzed, i.e. filename_start1.mat, filename_start2.mat, ...\
+    -Nboots is the number of bootstrap runs used in estimating the errors in the position-position correlation time (default 50)\
+    -if doplot is true, after finishing, the simulation will plot position-position correlations and their exponential fits\
+    -doCIerr should be false - it is an attempt to propagate some errors through the CI, but turns out to be both slow and negligible\
     -nw and nh are the number of points simulated for each parameter (i.e. the numbers given to twosweep.pl)
 
     Unfortunately, this is the opposite order to twosweep.pl - you should enter nw = 20, nh = 2 
