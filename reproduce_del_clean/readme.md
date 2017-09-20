@@ -55,18 +55,18 @@ Here is our approach:
     -doCIerr should be false - it is an attempt to propagate some errors through the CI, but turns out to be both slow and negligible
     -nw and nh are the number of points simulated for each parameter (i.e. the numbers given to twosweep.pl)
 
-    Unfortunately, this is the opposite order than twosweep.pl - you should enter nw = 20, nh = 2 
+    Unfortunately, this is the opposite order to twosweep.pl - you should enter nw = 20, nh = 2 
 
-    ** You will probably get warnings - for the points where D_psi = 0, the relaxation time is essentially infinite, and the fit fails - we then assume the relaxation time is large (set it = inf)
-    ** This is normal!
+    ** You will probably get warnings - for the points where D_psi = 0, the relaxation time is essentially infinite, and the fit fails - we then assume the relaxation time is large (set it = inf)\
+    ** This is normal!\
     ** The script will take a few minutes to run
 
-*** Note - to just reproduce the figures, we also provide a data file with typical results from steps 1-4 for both figures in the data folder
+*** Note - to just reproduce the figures, we also provide a data file with typical results from steps 1-4 for both figures in the data folder\
 *** These data files, analyzed_vary_kappa.mat and analyzed_vary_Dpsi.mat provide the output of cellvar_analyze.m 
 
 5) Use the scripts to generate figures. Within the folder figures, there are scripts
 
-plot_Dpsi_figure.m and
+plot_Dpsi_figure.m and\
 plot_kappa_figure.m
 
 Using plot_kappa_figure after loading the od structure for the kappa variation data, and plot_Dpsi_figure after loading the od for the Dpsi variations
