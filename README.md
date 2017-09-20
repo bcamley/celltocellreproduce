@@ -1,5 +1,5 @@
 # celltocellreproduce
-Code by Brian Camley (http://bcamley.github.io)
+Code by Brian Camley (https://bcamley.github.io)
 README - 
 
 This package contains MATLAB code and data that should be sufficient to reproduce everything in the paper, "Cell-to-cell variation sets a tissue-rheology-dependent bound on collective gradient sensing", currently available on the arxiv at: https://arxiv.org/abs/1707.03532
@@ -9,9 +9,9 @@ Each folder provides that code and data for a different element of the paper:
 
 reproduce_mle_clean: the Maximum Likelihood Estimation results from Fig. 1\
 reproduce_rot_clean: finding the optimal rotation speed, etc. (Fig. 2)\
-reproduce_del_clean: Self-propelled particle simulations using the Delaunay triangulation interactions (Fig. 4, Fig.5)\
+reproduce_del_clean: Self-propelled particle simulations using the Delaunay triangulation interactions (Fig. 4, Fig.5)
 
-Within the first two folders, there is a script named reproduce_(something).m. If the variable rerun = 1, this script will recompute everything. If rerun = 0, the script will just replot the figures using the pre-generated data.
+Within the first two folders, there is a script named reproduce_(something).m. Run this script, and it will prompt you for a variable rerun; if rerun = 1, this script will recompute everything. If rerun = 0, the script will just replot the figures using the pre-generated data.
 
 The third part is more complex and has its own README.
 
